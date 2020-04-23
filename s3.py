@@ -1,6 +1,12 @@
 import sys
 import boto3
 import datetime
+from os import environ
+
+accesskey = environ.get('AWS_ACCESS_KEY_ID')
+secretkey = environ.get('AWS_SECRET_ACCESS_KEY_ID')
+sessiontoken = environ.get('AWS_SESSION_TOKEN')
+region = environ.get('aws_region')
 
 def s3_func(confbuck, confpref):
     s3_contents = [""]
